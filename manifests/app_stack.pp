@@ -81,14 +81,14 @@ class hdp::app_stack (
   Integer $hdp_port = 9091,
   String[1] $hdp_user = '11223',
   String[1] $compose_version = '1.25.0',
-  String[1] $image_repository = undef,
+  Optional[String[1]] $image_repository = undef,
 
   ## Either one of these two options can be configured
-  String[1] $ca_server = undef,
+  Optional[String[1]] $ca_server = undef,
 
-  String[1] $ca_cert_file = undef,
-  String[1] $key_file = undef,
-  String[1] $cert_file = undef,
+  Optional[String[1]] $ca_cert_file = undef,
+  Optional[String[1]] $key_file = undef,
+  Optional[String[1]] $cert_file = undef,
 
 
   String[1] $dns_name = "hdp.puppet",
